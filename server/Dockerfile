@@ -1,0 +1,6 @@
+FROM node:14.14.0-alpine
+workdir /usr/app
+copy ./package.json ./
+run npm install
+copy . .
+cmd ["npm","run","start"]
